@@ -1,0 +1,13 @@
+sudo aptitude install wut
+
+
+
+sudo easy_install pip virtualenv
+virtualenv --distribute --no-site-packages fofix_env
+pip -E fofix_env install -U numpy pyopengl PIL cython pygobject pysqlite
+pip -E fofix_env install fofix-grisly-py26env.tar.bz2
+source fofix_env/bin/activate
+FoFiX
+deactivate
+
+fofix data dir is in fofix_env/share/fofix/
