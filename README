@@ -22,7 +22,7 @@ If you already have all the python-deps and etc (from aptitude for example):
 
 virtualenv fofix_env
 source fofix_env/bin/activate
-pip install -q fofix-grisly-py26env.tar.bz2
+pip install -qe git://github.com/fuzion/fofix-grisly-virtualenv.git#egg=FoFiX
 FoFiX
 
 
