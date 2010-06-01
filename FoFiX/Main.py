@@ -124,7 +124,7 @@ def main():
   fullscreen = None
   resolution = None
   theme = None
-  debug = False
+  #debug = False
   difficulty = None
   part = None
   mode = 0
@@ -223,7 +223,7 @@ def main():
     #  - intro_video_end_time
     themename = Config.get("coffee", "themename")
     vidSource = os.path.join(Version.dataPath(), 'themes', themename, \
-                             'menu', 'intro.avi')
+                             'menu', 'intro.mp4')
     if os.path.isfile(vidSource):
       winWidth, winHeight = engine.view.geometry[2:4]
       songVideoStartTime = 0

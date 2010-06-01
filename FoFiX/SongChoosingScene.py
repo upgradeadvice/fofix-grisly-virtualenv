@@ -22,29 +22,27 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from Scene import Scene, SuppressScene
-from Song import SongQueue
+
 import os
 import time
-import math
-import Player
-import Dialogs
-import Song
-import Config
-import pygame
-import random
-from OpenGL.GL import *
-import Version
-from Menu import Menu, Choice
-from Settings import ConfigChoice, ActiveConfigChoice
-from Language import _
-from Input import KeyListener
-from View import Layer
-from Camera import Camera
-from Mesh import Mesh
-from Texture import Texture
 
-import Log    #MFH
+from Camera import Camera
+import Config
+import Dialogs
+from Language import _
+import Log
+from Menu import Menu
+from Mesh import Mesh
+import Player
+from Scene import Scene
+from Scene import SuppressScene
+from Settings import ActiveConfigChoice
+from Settings import ConfigChoice
+import Song
+from Texture import Texture
+import Version
+import pygame
+
 
 PRACTICE = 1
 CAREER = 2

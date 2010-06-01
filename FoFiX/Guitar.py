@@ -27,24 +27,59 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Player
-from Song import Note, Tempo
-from Mesh import Mesh
-from Neck import Neck
-import random
-from copy import deepcopy
-from Shader import shaders
-
-from OpenGL.GL import *
 import math
-from numpy import array, float32
-
-#myfingershurt: needed for multi-OS file fetching
 import os
-import Log
-import Song   #need the base song defines as well
 
 from Instrument import *
+
+import Log
+from Mesh import Mesh
+from Neck import Neck
+
+from OpenGL.GL import glRotate
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glDepthMask
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glLightfv
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glRotatef
+from OpenGL.raw.GL import glScalef
+from OpenGL.raw.GL import glShadeModel
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL import glVertex3f
+from OpenGL.raw.GL.constants import GL_AMBIENT
+from OpenGL.raw.GL.constants import GL_BLEND
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_DEPTH_TEST
+from OpenGL.raw.GL.constants import GL_DIFFUSE
+from OpenGL.raw.GL.constants import GL_LIGHT0
+from OpenGL.raw.GL.constants import GL_LIGHTING
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_ONE
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_POSITION
+from OpenGL.raw.GL.constants import GL_SMOOTH
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TEXTURE
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+import Player
+from Shader import shaders
+import Song
+from Song import Note
+from Song import Tempo
+from copy import deepcopy
+from numpy import array
+from numpy import float32
+import random
 
 class Guitar(Instrument):
   def __init__(self, engine, playerObj, editorMode = False, player = 0, bass = False):

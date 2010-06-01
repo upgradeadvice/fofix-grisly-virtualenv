@@ -21,12 +21,13 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Log
-import Audio
 import math
+
+import Audio
+import Config
+import Log
 from PitchAnalyzer import Analyzer
 import numpy
-import Config
 
 try:
   import pyaudio

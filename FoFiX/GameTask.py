@@ -22,11 +22,7 @@
 #####################################################################
 
 from Input import KeyListener
-from Session import MessageHandler
 from Task import Task
-from Language import _
-import Svg
-import Dialogs
 
 class GameTask(Task, KeyListener): # , MessageHandler
   def __init__(self, engine, drawMiniViews = False):

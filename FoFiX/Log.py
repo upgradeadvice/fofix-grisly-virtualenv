@@ -24,13 +24,14 @@
 ##@package Log
 # Functions for various types of logging that FoFiX needs to do.
 
-import sys
 import os
+import sys
+import time
+import warnings
+
 import Resource
 import Version
 import traceback
-import time
-import warnings
 
 ## Whether to output log entries to stdout in addition to the logfile.
 quiet = True

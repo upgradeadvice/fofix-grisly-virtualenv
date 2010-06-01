@@ -23,17 +23,19 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Config
-from OpenGL.GL import *
-import math
-import Log
-from Shader import shaders
-import Theme
 import os
-import random   #MFH - needed for new stage background handling
-from Language import _
 
-import Version # Provides dataPath
+import Config
+from Language import _
+import Log
+
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glVertex3f
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+from Shader import shaders
+import random
+ # Provides dataPath
 try:
   from VideoPlayer import VideoPlayer
   videoAvailable = True
@@ -100,6 +102,8 @@ class Stage(object):
     self.vidSource = None
     if self.songStage == 1:
       songAbsPath = os.path.join(libraryName, songName)
+      themename = self.engine.data.themeLabel
+      themepath = os.path.join("themes",themename,"stages")
       if songVideo is not None and \
              os.path.isfile(os.path.join(songAbsPath, songVideo)):
         self.vidSource = os.path.join(songAbsPath, songVideo)
@@ -107,6 +111,10 @@ class Stage(object):
         Log.warn("Video not found: %s" % \
                  os.path.join(songAbsPath, songVideo))
         self.vidSource = os.path.join(songAbsPath, "default.avi")
+      elif os.path.exists(os.path.join(themepath, "default.avi")):
+        Log.warn("Song Video not found: %s" % \
+                 os.path.join(songAbsPath, songVideo))
+        self.vidSource = os.path.join(themepath, "default.avi")
     if self.vidSource is None:
       if self.songStage == 1:
         Log.warn("Video not found: %s" % \
@@ -115,9 +123,9 @@ class Stage(object):
       songVideoEndTime = None
       self.vidSource = os.path.join(self.pathfull, "default.avi")
 
-    if not os.path.exists(self.vidSource):
+    if not os.path.isfile(self.vidSource):
       Log.warn("Video not found: %s" % \
-               os.path.join(self.pathfull, "default.avi"))
+               os.path.join(self.pathfull, "default.mp4"))
       Log.warn("No video found, fallbacking to default static image mode for now")
       self.mode = 1 # Fallback
       self.vidSource = None
@@ -144,14 +152,14 @@ class Stage(object):
     self.vidPlayer.loadVideo(self.vidSource)
     
   def load(self, libraryName, songName, practiceMode = False):
-    rm = os.path.join("themes", self.themename, "rockmeter.ini")
     if self.scene.coOpType == True:
       rm = os.path.join("themes", self.themename, "rockmeter_coop.ini")
     elif self.scene.battle == True:
       rm = os.path.join("themes", self.themename, "rockmeter_faceoff.ini")
     elif self.scene.battleGH == True:
       rm = os.path.join("themes", self.themename, "rockmeter_profaceoff.ini")
-    
+    else:
+      rm = os.path.join("themes", self.themename, "rockmeter.ini")
     rockmeter = self.engine.resource.fileName(rm)
     self.rockmeter = Rockmeter.Rockmeter(self.scene, rockmeter, self.scene.coOpType)
 

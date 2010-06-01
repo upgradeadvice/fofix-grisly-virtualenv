@@ -24,16 +24,16 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-import Config
-import Resource
-import Song
-import Scorekeeper
 import os
 import sys
+
+import Config
+import Dialogs
 from Language import _
-#import Dialogs
-import Microphone  #stump
+import Microphone
+import Song
+import pygame
+
 
 class ConfigOption:
   def __init__(self, id, text):

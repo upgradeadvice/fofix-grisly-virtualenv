@@ -20,11 +20,12 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Config
-import Version
-import Log
-import gettext
 import os
+
+import Config
+import Log
+import Version
+import gettext
 import glob
 
 Config.define("game", "language", str, "")

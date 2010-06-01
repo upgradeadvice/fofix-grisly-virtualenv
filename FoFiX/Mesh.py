@@ -20,11 +20,35 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from OpenGL.GL import *
+from FoFiX.cmgl import *
 
 import Collada
 
-from FoFiX.cmgl import *
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glLightfv
+from OpenGL.raw.GL import glMaterialf
+from OpenGL.raw.GL import glMaterialfv
+from OpenGL.raw.GL import glNormal3f
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glRotatef
+from OpenGL.raw.GL import glScalef
+from OpenGL.raw.GL import glTexCoord2f
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL import glVertex3f
+from OpenGL.raw.GL.constants import GL_AMBIENT
+from OpenGL.raw.GL.constants import GL_DIFFUSE
+from OpenGL.raw.GL.constants import GL_FRONT_AND_BACK
+from OpenGL.raw.GL.constants import GL_LIGHT0
+from OpenGL.raw.GL.constants import GL_LIGHTING
+from OpenGL.raw.GL.constants import GL_POLYGON
+from OpenGL.raw.GL.constants import GL_POSITION
+from OpenGL.raw.GL.constants import GL_SHININESS
+from OpenGL.raw.GL.constants import GL_SPECULAR
+from OpenGL.raw.GL.constants import GL_TRIANGLES
 
 class Mesh:
   def __init__(self, fileName):

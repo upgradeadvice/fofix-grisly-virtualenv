@@ -23,16 +23,18 @@
 #####################################################################
 
 import os
-from Queue import Queue, Empty
-from threading import Thread, BoundedSemaphore
-import time
-import shutil
 import stat
-import Config
+import time
 
-from Task import Task
+import Config
 import Log
+from Queue import Empty
+from Queue import Queue
+from Task import Task
 import Version
+import shutil
+from threading import BoundedSemaphore
+from threading import Thread
 
 class Loader(Thread):
   def __init__(self, target, name, function, resultQueue, loaderSemaphore, onLoad = None, onCancel = None):

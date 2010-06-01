@@ -28,39 +28,49 @@
 
 #altered by myfingershurt to adapt to Alarian mod
 
-import Player
-from Song import Note, Tempo
+from Instrument import Instrument
+import math
+import os
+
+import Log
 from Mesh import Mesh
 from Neck import Neck
-import random
-from copy import deepcopy
+from OpenGL.GL import glRotate
+from OpenGL.GL import glTranslate
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glDepthMask
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glLightfv
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glRotatef
+from OpenGL.raw.GL import glScalef
+from OpenGL.raw.GL import glShadeModel
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL.constants import GL_AMBIENT
+from OpenGL.raw.GL.constants import GL_BLEND
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_DEPTH_TEST
+from OpenGL.raw.GL.constants import GL_DIFFUSE
+from OpenGL.raw.GL.constants import GL_LIGHT0
+from OpenGL.raw.GL.constants import GL_LIGHTING
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_ONE
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_POSITION
+from OpenGL.raw.GL.constants import GL_SMOOTH
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TEXTURE
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
 from Shader import shaders
-
-from OpenGL.GL import *
-import math
-from numpy import array, float32
-
-#myfingershurt: needed for multi-OS file fetching
-import os
-import Log
-import Song   #need the base song defines as well
-
-#Normal guitar key color order: Green, Red, Yellow, Blue, Orange
-#Drum fret color order: Red, Yellow, Blue, Green
-#actual drum note numbers:
-#0 = bass drum (stretched Orange fret), normally Green fret
-#1 = drum Red fret, normally Red fret
-#2 = drum Yellow fret, normally Yellow fret
-#3 = drum Blue fret, normally Blue fret
-#4 = drum Green fret, normally Orange fret
-#
-#So, with regard to note number coloring, swap note.number 0's color wih note.number 4.
-
-#akedrou - 5-drum support is now available.
-# to enable it, only here and Player.drums should need changing.
-
-
-from Instrument import *
+import Song
+from Song import Note
+from Song import Tempo
 
 class Drum(Instrument):
   def __init__(self, engine, playerObj, editorMode = False, player = 0):

@@ -22,8 +22,10 @@
 # ***** END GPL LICENCE BLOCK *****
 # --------------------------------------------------------------------------
 
-from xml.dom.minidom import *
 from datetime import *
+from xml.dom.minidom import Element
+from xml.dom.minidom import Text
+from xml.dom.minidom import parse
 
 # The number of decimals to export floats to
 ROUND = 5
@@ -426,7 +428,7 @@ class DaeDocument(object):
 		doc.unlink()
 		
 		if debugMode:
-			Debug.Debug('Directly exporting this DaeDocument...','DEBUG')
+			#Debug.Debug('Directly exporting this DaeDocument...','DEBUG')
 			self.SaveDocumentToFile(filename+'_out.dae')
 			
 	def SaveDocumentToFile(self, filename):
@@ -484,7 +486,8 @@ class DaeEntity(object):
 		self.syntax = 'UNKNOWN'
 		
 	def LoadFromXml(self, daeDocument, xmlNode):
-		Debug.Debug('DaeEntity: Override this method for %s'%(type(self)),'WARNING')
+		return
+		#Debug.Debug('DaeEntity: Override this method for %s'%(type(self)),'WARNING')
 	
 	def SaveToXml(self, daeDocument):
 		node = Element(self.syntax)
@@ -2437,7 +2440,8 @@ class DaeFxShadeConstant(DaeEntity):
 				self.indexOfRefraction = DaeFxCommonFloatAndParamContainer(type)
 			self.indexOfRefraction.float = val
 		else:
-			Debug.Debug('DaeFxShadeConstant: type: %s not recognised'%(type),'ERROR')
+			return
+			#Debug.Debug('DaeFxShadeConstant: type: %s not recognised'%(type),'ERROR')
 
 		
 	

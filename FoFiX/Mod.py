@@ -21,9 +21,10 @@
 #####################################################################
 
 import os
+
 import Config
-import Theme
 from Language import _
+import Theme
 
 def _getModPath(engine):
   return engine.resource.fileName("mods")

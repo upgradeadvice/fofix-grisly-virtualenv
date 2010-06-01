@@ -22,14 +22,20 @@
 #####################################################################
 
 from __future__ import division
-from OpenGL.GL import *
-from OpenGL.GLU import *
-
-import numpy as np
-
 import Log
-
+from OpenGL.raw.GL import glGetIntegerv
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glOrtho
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glScissor
+from OpenGL.raw.GL import glViewport
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GL.constants import GL_VIEWPORT
 from Task import Task
+import numpy as np
 
 class Layer(Task):
   def __getattr__(self, name):  #for new out-themed rendering

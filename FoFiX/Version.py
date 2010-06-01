@@ -20,10 +20,9 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import sys
 import os
-import subprocess
 import re
+import sys
 
 MAJOR_VERSION = 4
 MINOR_VERSION = 0

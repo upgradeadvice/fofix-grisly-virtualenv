@@ -21,20 +21,25 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Log
-import os
-from Language import _
-
-from Microphone import Microphone, getNoteName
-from Song import VocalNote, VocalPhrase
-from OpenGL.GL import *
-from numpy import array, float32
-from random import random
 from FoFiX.cmgl import *
+import os
 
-#stump: needed for continuous star fillup (akedrou - stealing for vocals)
-from PIL import Image, ImageDraw
+from Language import _
+import Log
+from Microphone import Microphone
+from Microphone import getNoteName
+
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL.constants import GL_QUADS
+from PIL import Image
+from PIL import ImageDraw
+from Song import VocalNote
+from Song import VocalPhrase
 from Svg import ImgDrawing
+from numpy import array
+from numpy import float32
+from random import random
 
 diffMod    = {0: 1.4, 1: 1.6, 2: 1.75, 3: 1.9}
 baseScores = {0: 1000, 1: 800, 2: 400, 3: 200}

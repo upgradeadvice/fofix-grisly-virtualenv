@@ -21,14 +21,38 @@
 #####################################################################
 
 from __future__ import division
-
 import Log
-import Config
+from OpenGL.GL.exceptional import glDeleteTextures
+from OpenGL.GL.exceptional import glGenTextures
+from OpenGL.constants import GL_UNSIGNED_BYTE
+from OpenGL.raw.GL import glBindTexture
+from OpenGL.raw.GL import glHint
+from OpenGL.raw.GL import glPixelStorei
+from OpenGL.raw.GL import glTexEnvf
+from OpenGL.raw.GL import glTexImage2D
+from OpenGL.raw.GL import glTexParameteri
+from OpenGL.raw.GL import glTexSubImage2D
+from OpenGL.raw.GL.constants import GL_INTENSITY8
+from OpenGL.raw.GL.constants import GL_LINEAR
+from OpenGL.raw.GL.constants import GL_LINEAR_MIPMAP_LINEAR
+from OpenGL.raw.GL.constants import GL_LUMINANCE
+from OpenGL.raw.GL.constants import GL_MODULATE
+from OpenGL.raw.GL.constants import GL_NICEST
+from OpenGL.raw.GL.constants import GL_PERSPECTIVE_CORRECTION_HINT
+from OpenGL.raw.GL.constants import GL_REPEAT
+from OpenGL.raw.GL.constants import GL_RGB
+from OpenGL.raw.GL.constants import GL_RGBA
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TEXTURE_ENV
+from OpenGL.raw.GL.constants import GL_TEXTURE_ENV_MODE
+from OpenGL.raw.GL.constants import GL_TEXTURE_MAG_FILTER
+from OpenGL.raw.GL.constants import GL_TEXTURE_MIN_FILTER
+from OpenGL.raw.GL.constants import GL_TEXTURE_WRAP_S
+from OpenGL.raw.GL.constants import GL_TEXTURE_WRAP_T
+from OpenGL.raw.GL.constants import GL_UNPACK_ALIGNMENT
+from OpenGL.raw.GLU import gluBuild2DMipmaps
 from PIL import Image
 import pygame
-import StringIO
-from OpenGL.GL import *
-from OpenGL.GLU import *
 
 class TextureException(Exception):
   pass

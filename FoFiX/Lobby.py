@@ -23,20 +23,21 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-from OpenGL.GL import *
 import os
-import shutil
 
-from View import Layer
+import Dialogs
 from Input import KeyListener
 from Language import _
-from Player import GUITARTYPES, DRUMTYPES, MICTYPES
-import Dialogs
+
+from OpenGL.raw.GL import glColor3f
 import Player
-import Menu
+from Player import DRUMTYPES
+from Player import GUITARTYPES
+from Player import MICTYPES
 import Song
-import Config
+from View import Layer
+import pygame
+import shutil
 
 class ControlConfigError(Exception):
   def __str__(self):

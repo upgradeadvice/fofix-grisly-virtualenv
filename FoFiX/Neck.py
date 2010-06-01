@@ -22,20 +22,36 @@
 #####################################################################
 
 
-import Player
-from Song import Tempo, Bars
-import random
-from copy import deepcopy
-from Shader import shaders, mixColors
-
-from OpenGL.GL import *
-from numpy import array, float32
 from FoFiX.cmgl import *
-
-#myfingershurt: needed for multi-OS file fetching
 import os
+
 import Log
-import Song   #need the base song defines as well
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glTexCoord2f
+from OpenGL.raw.GL import glVertex3f
+from OpenGL.raw.GL.constants import GL_ONE
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+import Player
+from Shader import mixColors
+from Shader import shaders
+import Song
+from Song import Bars
+from Song import Tempo
+from copy import deepcopy
+from numpy import array
+from numpy import float32
+import random
+   #need the base song defines as well
 
 class Neck:
   def __init__(self, engine, instrument, playerObj):

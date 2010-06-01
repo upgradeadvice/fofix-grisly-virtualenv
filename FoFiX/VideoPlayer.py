@@ -22,19 +22,17 @@
 import os
 import sys
 
-# Twiddle the appropriate envvars under Windows so we can load gstreamer
-# directly from [FoFiX root]/gstreamer and not have the ugliness of
-# requiring the user to install and configure it separately...
-if os.name == 'nt':
-  if hasattr(sys, 'frozen'):
-    _gstpath = 'gstreamer'
-  else:
-    _gstpath = os.path.join('..', 'gstreamer')
-  if os.path.isdir(_gstpath):
-    os.environ['PATH'] = os.path.abspath(os.path.join(_gstpath, 'bin')) + os.pathsep + os.environ['PATH']
-    os.environ['GST_PLUGIN_PATH'] = os.path.abspath(os.path.join(_gstpath, 'lib', 'gstreamer-0.10'))
-
-# Almighty GStreamer
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
 import gobject
 import pygst
 pygst.require('0.10')
@@ -43,8 +41,6 @@ from gst.extend import discoverer # Video property detection
 
 import pygame
 
-from OpenGL.GL import *
-from OpenGL.GLU import *
 # Array-based drawing
 from numpy import array, float32
 

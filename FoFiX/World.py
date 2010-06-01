@@ -21,13 +21,12 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
+import Dialogs
+from Language import _
+import Log
 import Player
 import SceneFactory
-import Config
-import Log
-import Dialogs
 from Song import SongQueue
-from Language import _
 
 STARTUP_SCENE = "SongChoosingScene"
 

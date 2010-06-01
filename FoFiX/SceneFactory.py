@@ -24,6 +24,7 @@
 
 # Scenes
 import sys
+
 import glob
 
 scenes = ['FoFiX.'+n[6:-3] for n in glob.glob("FoFiX/*Scene.py")]

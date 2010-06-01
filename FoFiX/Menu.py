@@ -22,18 +22,32 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-from OpenGL.GL import *
 import math
 import os
 
-from View import Layer
-from Input import KeyListener
 import Data
 import Dialogs
-import Player
-
+from Input import KeyListener
 import Log
+
+from OpenGL.GL import glRotate
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL import glVertex2f
+from OpenGL.raw.GL.constants import GL_BLEND
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TRIANGLES
+import Player
+from View import Layer
+import pygame
 
 class Choice:
   def __init__(self, text, callback, name = None, values = None, valueIndex = 0, append_submenu_char = True, tipText = None):

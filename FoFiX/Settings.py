@@ -29,22 +29,20 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Menu
-from Language import _
-import Dialogs
-import Config
-import Mod
-import Audio
-import Player
-import Version
-from View import BackgroundLayer
-from Input import KeyListener
-from Song import VOCAL_PART
-
-import pygame
 import os
 
+import Config
+import Dialogs
+from Input import KeyListener
+from Language import _
 import Log
+import Menu
+import Mod
+import Player
+from Song import VOCAL_PART
+import Version
+from View import BackgroundLayer
+import pygame
 
 class ConfigChoice(Menu.Choice):
   def __init__(self, engine, config, section, option, autoApply = False, isQuickset = 0):

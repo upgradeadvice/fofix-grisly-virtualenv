@@ -30,27 +30,53 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from Scene import Scene, SuppressScene
-from Song import Note, Tempo, TextEvent, PictureEvent, loadSong, Bars, VocalNote, VocalPhrase
-from Menu import Menu
-
-from Language import _
-import Player
-from Player import CONTROLLER1KEYS, CONTROLLER2KEYS, CONTROLLER3KEYS, CONTROLLER1ACTIONS, CONTROLLER2ACTIONS, CONTROLLER3ACTIONS, CONTROLLER4KEYS, CONTROLLER4ACTIONS
-from Player import CONTROLLER1DRUMS, CONTROLLER2DRUMS, CONTROLLER3DRUMS, CONTROLLER4DRUMS, STAR, KILL, CANCEL, KEY1A
-import Dialogs
-import Data
-import View
-import Audio
-import Stage
-import Settings
-import Song
-from Scorekeeper import ScoreCard, Rockmeter
-from Shader import shaders
-
 import math
-import random
 import os
+
+import Audio
+import Data
+import Dialogs
+from Language import _
+from Menu import Menu
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glTranslatef
+import Player
+from Player import CANCEL
+from Player import CONTROLLER1ACTIONS
+from Player import CONTROLLER1DRUMS
+from Player import CONTROLLER1KEYS
+from Player import CONTROLLER2ACTIONS
+from Player import CONTROLLER2DRUMS
+from Player import CONTROLLER2KEYS
+from Player import CONTROLLER3ACTIONS
+from Player import CONTROLLER3DRUMS
+from Player import CONTROLLER3KEYS
+from Player import CONTROLLER4ACTIONS
+from Player import CONTROLLER4DRUMS
+from Player import CONTROLLER4KEYS
+from Player import KEY1A
+from Player import KILL
+from Player import STAR
+from Scene import Scene
+from Scene import SuppressScene
+from Scorekeeper import Rockmeter
+from Scorekeeper import ScoreCard
+import Settings
+from Shader import shaders
+import Song
+from Song import Bars
+from Song import Note
+from Song import PictureEvent
+from Song import Tempo
+from Song import TextEvent
+from Song import VocalNote
+from Song import VocalPhrase
+from Song import loadSong
+import Stage
+import View
+import random
 
 try:
   set()
@@ -60,7 +86,6 @@ except:
 import Log
 import locale
 
-from OpenGL.GL import *
 
 #blazingamer: Little fix for RB Score font
 from pygame import version
@@ -1464,7 +1489,7 @@ class GuitarScene(Scene):
                              songVideoEndTime = songVideoEndTime)
       else:
         Log.warn("Video playback is not supported. GStreamer or its python bindings can't be found")
-        self.engine.config.set("game", "stage_mode", 1)
+        #self.engine.config.set("game", "stage_mode", 1)
         self.stage.mode = 1
 
     self.stage.load(self.libraryName, self.songName, self.playerList[0].practiceMode)
@@ -6675,7 +6700,8 @@ class GuitarScene(Scene):
             if jurgY > .75 - h:
               jurgY = .75 - h
             if not self.failed:
-              bigFont.render(text,  (jurgX, jurgY), scale = jurgScale)#MFH - y was 0.4 - more positioning weirdness.
+              #bigFont.render(text,  (jurgX, jurgY), scale = jurgScale)#MFH - y was 0.4 - more positioning weirdness.
+              pass
           gN += 1
 
           #End Jurgen Code

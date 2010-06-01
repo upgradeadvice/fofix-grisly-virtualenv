@@ -27,28 +27,30 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from Scene import Scene, SuppressScene
-import Player
-import Scorekeeper
-import Dialogs
-import Song
-import Data
-from Menu import Menu
-from Audio import Sound
-from Language import _
-
-import Config
-import hashlib
-import Cerealizer
 import binascii
-import urllib
-import Log
-
-import pygame
-import math
-import random
 import os
-from OpenGL.GL import *
+
+from Audio import Sound
+import Cerealizer
+import Dialogs
+from Language import _
+import Log
+from Menu import Menu
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL.constants import GL_BLEND
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from Scene import Scene
+from Scene import SuppressScene
+import Scorekeeper
+import Song
+import hashlib
+import pygame
+import random
+import urllib
 
 class GameResultsScene(Scene):
   def __init__(self, engine, libraryName, songName, scores = None, coOpType = False, careerMode = False):
@@ -940,7 +942,7 @@ class GameResultsScene(Scene):
         settingsText = "%s %s - %s: %s / %s, %s: %s" % (self.engine.versionString, self.tsSettings, self.tsHopos, self.hopoStyle, self.hopoFreq, self.tsHitWindow, self.hitWindow)
         settingsScale = 0.0012
         wText, hText = defFont.getStringSize(settingsText, settingsScale)
-        defFont.render(settingsText, (.5 - wText/2, 0.0), scale = settingsScale)
+        #defFont.render(settingsText, (.5 - wText/2, 0.0), scale = settingsScale)
         
         try:
           font = self.engine.data.fontDict[self.engine.theme.result_stats_accuracy[4]]
@@ -1122,7 +1124,7 @@ class GameResultsScene(Scene):
       settingsText = "%s %s - %s: %s / %s, %s: %s" % (self.engine.versionString, self.tsSettings, self.tsHopos, self.hopoStyle, self.hopoFreq, self.tsHitWindow, self.hitWindow)
       settingsScale = 0.0012
       wText, hText = font.getStringSize(settingsText, settingsScale)
-      defFont.render(settingsText, (.5 - wText/2, 0.0), scale = settingsScale)
+      #defFont.render(settingsText, (.5 - wText/2, 0.0), scale = settingsScale)
       
       if self.coOpType == 2:
         try:

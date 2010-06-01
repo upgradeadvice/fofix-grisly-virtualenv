@@ -1,0 +1,687 @@
+AUTHORS
+COPYING
+CREDITS
+INSTALL
+MANIFEST.in
+README
+fofix.ico
+setup.cfg
+setup.py
+tutorial.pot
+FoFiX/AnimationPlayer.py
+FoFiX/Audio.py
+FoFiX/Camera.py
+FoFiX/Cerealizer.py
+FoFiX/Collada.py
+FoFiX/Config.py
+FoFiX/Credits.py
+FoFiX/Data.py
+FoFiX/Debug.py
+FoFiX/Dialogs.py
+FoFiX/Drum.py
+FoFiX/Font.py
+FoFiX/GameEngine.py
+FoFiX/GameResultsScene.py
+FoFiX/GameTask.py
+FoFiX/Guitar.py
+FoFiX/GuitarScene.py
+FoFiX/Input.py
+FoFiX/Instrument.py
+FoFiX/Language.py
+FoFiX/Lobby.py
+FoFiX/Log.py
+FoFiX/Main.py
+FoFiX/MainMenu.py
+FoFiX/Menu.py
+FoFiX/Mesh.py
+FoFiX/Microphone.py
+FoFiX/Mod.py
+FoFiX/Neck.py
+FoFiX/PitchAnalyzer.py
+FoFiX/Player.py
+FoFiX/Resource.py
+FoFiX/Rockmeter.py
+FoFiX/Scene.py
+FoFiX/SceneFactory.py
+FoFiX/SceneFactory.pyc
+FoFiX/Scorekeeper.py
+FoFiX/Settings.py
+FoFiX/Shader.py
+FoFiX/Song.py
+FoFiX/SongChoosingScene.py
+FoFiX/Stage.py
+FoFiX/Svg.py
+FoFiX/Task.py
+FoFiX/Texture.py
+FoFiX/Theme.py
+FoFiX/VFS.py
+FoFiX/Version.py
+FoFiX/Version.pyc
+FoFiX/Video.py
+FoFiX/VideoPlayer.py
+FoFiX/View.py
+FoFiX/Vocalist.py
+FoFiX/World.py
+FoFiX/__init__.py
+FoFiX/__init__.pyc
+FoFiX/cmgl.c
+FoFiX/cmgl.py
+FoFiX/cmgl.pyx
+FoFiX/glwrap.h
+FoFiX.egg-info/PKG-INFO
+FoFiX.egg-info/SOURCES.txt
+FoFiX.egg-info/dependency_links.txt
+FoFiX.egg-info/not-zip-safe
+FoFiX.egg-info/top_level.txt
+FoFiX/midi/DataTypeConverters.py
+FoFiX/midi/DataTypeConverters.pyc
+FoFiX/midi/EventDispatcher.py
+FoFiX/midi/EventDispatcher.pyc
+FoFiX/midi/MidiFileParser.py
+FoFiX/midi/MidiFileParser.pyc
+FoFiX/midi/MidiInFile.py
+FoFiX/midi/MidiInFile.pyc
+FoFiX/midi/MidiInStream.py
+FoFiX/midi/MidiInStream.pyc
+FoFiX/midi/MidiOutFile.py
+FoFiX/midi/MidiOutFile.pyc
+FoFiX/midi/MidiOutStream.py
+FoFiX/midi/MidiOutStream.pyc
+FoFiX/midi/MidiToText.py
+FoFiX/midi/MidiToText.pyc
+FoFiX/midi/RawInstreamFile.py
+FoFiX/midi/RawInstreamFile.pyc
+FoFiX/midi/RawOutstreamFile.py
+FoFiX/midi/RawOutstreamFile.pyc
+FoFiX/midi/__init__.py
+FoFiX/midi/__init__.pyc
+FoFiX/midi/changes.txt
+FoFiX/midi/constants.py
+FoFiX/midi/constants.pyc
+FoFiX/midi/readme.txt
+FoFiX/midi/version.txt
+FoFiX/tests/AnimationPlayerTest.py
+FoFiX/tests/AudioTest.py
+FoFiX/tests/CerealizerTest.py
+FoFiX/tests/DialogTest.py
+FoFiX/tests/DrawingTest.py
+FoFiX/tests/FontTest.py
+FoFiX/tests/GameEngineTest.py
+FoFiX/tests/MenuTest.py
+FoFiX/tests/ResourceTest.py
+FoFiX/tests/SceneTest.py
+FoFiX/tests/SongTest.py
+FoFiX/tests/SvgTest.py
+FoFiX/tests/TestAll.py
+FoFiX/tests/VFSTest.py
+FoFiX/tests/VideoPlayerTest.py
+FoFiX/tests/VideoTest.py
+FoFiX/tests/ViewTest.py
+data/analog.png
+data/analogback.png
+data/analogthresh.png
+data/arrow.png
+data/bass.png
+data/bigtail1.png
+data/bigtail2.png
+data/cassette.dae
+data/cassette.png
+data/default.ttf
+data/drum.png
+data/failneck.png
+data/fofix_icon.png
+data/fofix_logo.png
+data/freestyletail1.png
+data/freestyletail2.png
+data/glow.png
+data/guitar.png
+data/international.ttf
+data/key.dae
+data/key_open.dae
+data/kill1.png
+data/kill2.png
+data/label.dae
+data/left.png
+data/library.dae
+data/library_label.dae
+data/mfhlogo.png
+data/mic.png
+data/neckblackback.png
+data/note.dae
+data/open.dae
+data/right.png
+data/star.dae
+data/tail1.png
+data/tail2.png
+data/test.png
+data/theme.ini
+data/title.ttf
+data/versiontag.png
+data/avatars/Jurgen.png
+data/mods/mods.txt
+data/mods/Cassettes/cassette.dae
+data/mods/Cassettes/label.dae
+data/mods/Guitar Cases/library.dae
+data/mods/Guitar Cases/library_label.dae
+data/mods/Low Poly CD List/cassette.dae
+data/mods/Low Poly CD List/label.dae
+data/mods/Low Poly CD List/library.dae
+data/mods/Low Poly CD List/library_label.dae
+data/mods/MegaLight RB Notes/themes/MegaLight/drumnotes.png
+data/mods/MegaLight RB Notes/themes/MegaLight/notes.png
+data/necks/defaultneck.png
+data/necks/hollowmindneck1.png
+data/necks/hollowmindneck2z.png
+data/necks/hollowmindneck3h.png
+data/necks/hollowmindneck4.png
+data/necks/hollowmindneck5.png
+data/necks/randomneck.png
+data/necks/semitransparent.png
+data/po/brazilian_portuguese.po
+data/po/french.po
+data/po/german.po
+data/po/italian.po
+data/po/spanish.po
+data/shaders/cd.frag
+data/shaders/cd.vert
+data/shaders/lightning.frag
+data/shaders/lightning.vert
+data/shaders/metal.frag
+data/shaders/metal.vert
+data/shaders/neck.frag
+data/shaders/neck.vert
+data/shaders/noise3d.dds
+data/shaders/outline.tga
+data/shaders/rockbandtail.frag
+data/shaders/rockbandtail.vert
+data/sounds/100pct1.ogg
+data/sounds/100pct2.ogg
+data/sounds/100pct3.ogg
+data/sounds/99pct1.ogg
+data/sounds/99pct2.ogg
+data/sounds/99pct3.ogg
+data/sounds/bassdrum.ogg
+data/sounds/bassscw1.ogg
+data/sounds/bassscw2.ogg
+data/sounds/bassscw3.ogg
+data/sounds/bassscw4.ogg
+data/sounds/bassscw5.ogg
+data/sounds/bassscw6.ogg
+data/sounds/clapsound.ogg
+data/sounds/crash.ogg
+data/sounds/crowdcheers.ogg
+data/sounds/drumscw1.ogg
+data/sounds/drumscw2.ogg
+data/sounds/drumscw3.ogg
+data/sounds/drumscw4.ogg
+data/sounds/drumscw5.ogg
+data/sounds/drumscw6.ogg
+data/sounds/drumscw7.ogg
+data/sounds/drumscw8.ogg
+data/sounds/failsound.ogg
+data/sounds/guitscw1.ogg
+data/sounds/guitscw2.ogg
+data/sounds/guitscw3.ogg
+data/sounds/guitscw4.ogg
+data/sounds/guitscw5.ogg
+data/sounds/guitscw6.ogg
+data/sounds/jurgen1.ogg
+data/sounds/jurgen2.ogg
+data/sounds/jurgen3.ogg
+data/sounds/jurgen4.ogg
+data/sounds/jurgen5.ogg
+data/sounds/myhero.ogg
+data/sounds/perfect1.ogg
+data/sounds/perfect2.ogg
+data/sounds/perfect3.ogg
+data/sounds/rocksound.ogg
+data/sounds/starlost.ogg
+data/sounds/tom01.ogg
+data/sounds/tom02.ogg
+data/sounds/tom03.ogg
+data/themes/MegaLight/CREDITS
+data/themes/MegaLight/CustomTheme.py
+data/themes/MegaLight/bassgrooveneck.png
+data/themes/MegaLight/bassgrooveneckovr.png
+data/themes/MegaLight/bigtail1.png
+data/themes/MegaLight/bigtail2.png
+data/themes/MegaLight/bpm_beat.png
+data/themes/MegaLight/bpm_halfbeat.png
+data/themes/MegaLight/bpm_measure.png
+data/themes/MegaLight/brescorebackground.png
+data/themes/MegaLight/brescoreframe.png
+data/themes/MegaLight/center_lines.png
+data/themes/MegaLight/copyright
+data/themes/MegaLight/default.ttf
+data/themes/MegaLight/drumcenterlines.png
+data/themes/MegaLight/drumnotes.png
+data/themes/MegaLight/editor.png
+data/themes/MegaLight/fretbuttons.png
+data/themes/MegaLight/gameresults.png
+data/themes/MegaLight/glow.png
+data/themes/MegaLight/guitarsoloneck.png
+data/themes/MegaLight/guitarsoloneckovr.png
+data/themes/MegaLight/hitflames1.png
+data/themes/MegaLight/hitflames2.png
+data/themes/MegaLight/hitglow.png
+data/themes/MegaLight/hitglow2.png
+data/themes/MegaLight/kill1.png
+data/themes/MegaLight/kill2.png
+data/themes/MegaLight/loading.ttf
+data/themes/MegaLight/loadingbg.png
+data/themes/MegaLight/lyricsheet.png
+data/themes/MegaLight/menu.ttf
+data/themes/MegaLight/mic.png
+data/themes/MegaLight/note.dae
+data/themes/MegaLight/notes.png
+data/themes/MegaLight/notetex_a.png
+data/themes/MegaLight/notetex_b.png
+data/themes/MegaLight/notetex_c.png
+data/themes/MegaLight/notetex_d.png
+data/themes/MegaLight/notetex_e.png
+data/themes/MegaLight/open.dae
+data/themes/MegaLight/opentex.png
+data/themes/MegaLight/opentex_star.png
+data/themes/MegaLight/overdrive center_lines.png
+data/themes/MegaLight/overdrive fill.png
+data/themes/MegaLight/overdrive side_bars.png
+data/themes/MegaLight/overdriveneck.png
+data/themes/MegaLight/pause.png
+data/themes/MegaLight/pause.ttf
+data/themes/MegaLight/rockmeter.ini
+data/themes/MegaLight/rockmeter_coop.ini
+data/themes/MegaLight/rockmeter_faceoff.ini
+data/themes/MegaLight/score.ttf
+data/themes/MegaLight/side_bars.png
+data/themes/MegaLight/soloframe.png
+data/themes/MegaLight/stage.ini
+data/themes/MegaLight/star.dae
+data/themes/MegaLight/star1.png
+data/themes/MegaLight/star2.png
+data/themes/MegaLight/starperfect.png
+data/themes/MegaLight/startex_a.png
+data/themes/MegaLight/startex_b.png
+data/themes/MegaLight/startex_c.png
+data/themes/MegaLight/startex_d.png
+data/themes/MegaLight/startex_e.png
+data/themes/MegaLight/tail1.png
+data/themes/MegaLight/tail2.png
+data/themes/MegaLight/youfailed.png
+data/themes/MegaLight/yourock.png
+data/themes/MegaLight GH3/CREDITS
+data/themes/MegaLight GH3/bassgrooveneck.png
+data/themes/MegaLight GH3/bassgrooveneckovr.png
+data/themes/MegaLight GH3/battle_icons.png
+data/themes/MegaLight GH3/battle_rock_top.png
+data/themes/MegaLight GH3/bigtail1.png
+data/themes/MegaLight GH3/bigtail2.png
+data/themes/MegaLight GH3/bpm_beat.png
+data/themes/MegaLight GH3/bpm_halfbeat.png
+data/themes/MegaLight GH3/bpm_measure.png
+data/themes/MegaLight GH3/center_lines.png
+data/themes/MegaLight GH3/coop_rockmeter.png
+data/themes/MegaLight GH3/copyright
+data/themes/MegaLight GH3/default.ttf
+data/themes/MegaLight GH3/drumcenterlines.png
+data/themes/MegaLight GH3/drumnotes.png
+data/themes/MegaLight GH3/editor.png
+data/themes/MegaLight GH3/fail.png
+data/themes/MegaLight GH3/fretbuttons.png
+data/themes/MegaLight GH3/gameresults.png
+data/themes/MegaLight GH3/guitarsoloneck.png
+data/themes/MegaLight GH3/guitarsoloneckovr.png
+data/themes/MegaLight GH3/hitflames1.png
+data/themes/MegaLight GH3/hitflames2.png
+data/themes/MegaLight GH3/hitglow.png
+data/themes/MegaLight GH3/hitglow1.png
+data/themes/MegaLight GH3/hitglow2.png
+data/themes/MegaLight GH3/kill1.png
+data/themes/MegaLight GH3/kill2.png
+data/themes/MegaLight GH3/lightning.png
+data/themes/MegaLight GH3/loading.ttf
+data/themes/MegaLight GH3/loadingbg.png
+data/themes/MegaLight GH3/lyricsheet.png
+data/themes/MegaLight GH3/menu.ttf
+data/themes/MegaLight GH3/notes.png
+data/themes/MegaLight GH3/notesbattle.png
+data/themes/MegaLight GH3/overdrive center_lines.png
+data/themes/MegaLight GH3/overdrive side_bars.png
+data/themes/MegaLight GH3/overdriveneck.png
+data/themes/MegaLight GH3/pause.png
+data/themes/MegaLight GH3/pause.ttf
+data/themes/MegaLight GH3/rockmeter.ini
+data/themes/MegaLight GH3/score.ttf
+data/themes/MegaLight GH3/side_bars.png
+data/themes/MegaLight GH3/stage.ini
+data/themes/MegaLight GH3/star1.png
+data/themes/MegaLight GH3/star2.png
+data/themes/MegaLight GH3/tail1.png
+data/themes/MegaLight GH3/tail2.png
+data/themes/MegaLight GH3/theme.ini
+data/themes/MegaLight GH3/youfailed.png
+data/themes/MegaLight GH3/yourock.png
+data/themes/MegaLight GH3/menu/mainbg.png
+data/themes/MegaLight GH3/menu/maintext.png
+data/themes/MegaLight GH3/menu/neckchoosebg.png
+data/themes/MegaLight GH3/menu/neckchooseselect.png
+data/themes/MegaLight GH3/menu/neckchoosetext.png
+data/themes/MegaLight GH3/menu/optionsbg.png
+data/themes/MegaLight GH3/menu/optionspanel.png
+data/themes/MegaLight GH3/menu/selected.png
+data/themes/MegaLight GH3/rockmeter/counter.png
+data/themes/MegaLight GH3/rockmeter/dotbase.png
+data/themes/MegaLight GH3/rockmeter/dots.png
+data/themes/MegaLight GH3/rockmeter/mult.png
+data/themes/MegaLight GH3/rockmeter/rock_arr.png
+data/themes/MegaLight GH3/rockmeter/rock_hi.png
+data/themes/MegaLight GH3/rockmeter/rock_low.png
+data/themes/MegaLight GH3/rockmeter/rock_med.png
+data/themes/MegaLight GH3/rockmeter/rock_top.png
+data/themes/MegaLight GH3/rockmeter/rockmeter.png
+data/themes/MegaLight GH3/rockmeter/splight.png
+data/themes/MegaLight GH3/setlist/selected.png
+data/themes/MegaLight GH3/sounds/action.ogg
+data/themes/MegaLight GH3/sounds/guitscw1.ogg
+data/themes/MegaLight GH3/sounds/guitscw2.ogg
+data/themes/MegaLight GH3/sounds/guitscw3.ogg
+data/themes/MegaLight GH3/sounds/guitscw4.ogg
+data/themes/MegaLight GH3/sounds/guitscw5.ogg
+data/themes/MegaLight GH3/sounds/guitscw6.ogg
+data/themes/MegaLight GH3/sounds/in.ogg
+data/themes/MegaLight GH3/sounds/menu.ogg
+data/themes/MegaLight GH3/sounds/out.ogg
+data/themes/MegaLight GH3/sounds/select1.ogg
+data/themes/MegaLight GH3/sounds/select2.ogg
+data/themes/MegaLight GH3/sounds/select3.ogg
+data/themes/MegaLight GH3/sounds/starding.ogg
+data/themes/MegaLight GH3/sounds/starpower.ogg
+data/themes/MegaLight GH3/sounds/start.ogg
+data/themes/MegaLight GH3/stages/default.png
+data/themes/MegaLight GH3/stages/practice.png
+data/themes/MegaLight V4/CREDITS
+data/themes/MegaLight V4/bass.png
+data/themes/MegaLight V4/bassgrooveneck.png
+data/themes/MegaLight V4/bassgrooveneckovr.png
+data/themes/MegaLight V4/bigtail1.png
+data/themes/MegaLight V4/bigtail2.png
+data/themes/MegaLight V4/bpm_beat.png
+data/themes/MegaLight V4/bpm_halfbeat.png
+data/themes/MegaLight V4/bpm_measure.png
+data/themes/MegaLight V4/brescorebackground.png
+data/themes/MegaLight V4/brescoreframe.png
+data/themes/MegaLight V4/center_lines.png
+data/themes/MegaLight V4/copyright
+data/themes/MegaLight V4/default.ttf
+data/themes/MegaLight V4/drum.png
+data/themes/MegaLight V4/drumcenterlines.png
+data/themes/MegaLight V4/drumnotes.png
+data/themes/MegaLight V4/editor.png
+data/themes/MegaLight V4/fretbuttons.png
+data/themes/MegaLight V4/gameresults.png
+data/themes/MegaLight V4/glow.png
+data/themes/MegaLight V4/guitar.png
+data/themes/MegaLight V4/guitarsoloneck.png
+data/themes/MegaLight V4/guitarsoloneckovr.png
+data/themes/MegaLight V4/hitflames1.png
+data/themes/MegaLight V4/hitflames2.png
+data/themes/MegaLight V4/hitglow.png
+data/themes/MegaLight V4/hitglow2.png
+data/themes/MegaLight V4/kill1.png
+data/themes/MegaLight V4/kill2.png
+data/themes/MegaLight V4/loading.ttf
+data/themes/MegaLight V4/loadingbg.png
+data/themes/MegaLight V4/lyricsheet.png
+data/themes/MegaLight V4/menu.ttf
+data/themes/MegaLight V4/mic.png
+data/themes/MegaLight V4/notes.png
+data/themes/MegaLight V4/overdrive center_lines.png
+data/themes/MegaLight V4/overdrive fill.png
+data/themes/MegaLight V4/overdrive side_bars.png
+data/themes/MegaLight V4/overdriveneck.png
+data/themes/MegaLight V4/pause.png
+data/themes/MegaLight V4/pause.ttf
+data/themes/MegaLight V4/rockmeter.ini
+data/themes/MegaLight V4/score.ttf
+data/themes/MegaLight V4/side_bars.png
+data/themes/MegaLight V4/soloframe.png
+data/themes/MegaLight V4/stage.ini
+data/themes/MegaLight V4/star1.png
+data/themes/MegaLight V4/star2.png
+data/themes/MegaLight V4/starperfect.png
+data/themes/MegaLight V4/tail1.png
+data/themes/MegaLight V4/tail2.png
+data/themes/MegaLight V4/theme.ini
+data/themes/MegaLight V4/youfailed.png
+data/themes/MegaLight V4/yourock.png
+data/themes/MegaLight V4/menu/mainbg.png
+data/themes/MegaLight V4/menu/maintext.png
+data/themes/MegaLight V4/menu/neckchoosebg.png
+data/themes/MegaLight V4/menu/neckchooseselect.png
+data/themes/MegaLight V4/menu/neckchoosetext.png
+data/themes/MegaLight V4/menu/optionsbg.png
+data/themes/MegaLight V4/menu/optionspanel.png
+data/themes/MegaLight V4/rockmeter/bars.png
+data/themes/MegaLight V4/rockmeter/dotbase.png
+data/themes/MegaLight V4/rockmeter/dots.png
+data/themes/MegaLight V4/rockmeter/hud2back.png
+data/themes/MegaLight V4/rockmeter/hudback.png
+data/themes/MegaLight V4/rockmeter/instruments.png
+data/themes/MegaLight V4/rockmeter/stargrey.png
+data/themes/MegaLight V4/rockmeter/starwhite.png
+data/themes/MegaLight V4/setlist/item.dae
+data/themes/MegaLight V4/setlist/label.dae
+data/themes/MegaLight V4/setlist/library.dae
+data/themes/MegaLight V4/setlist/library_label.dae
+data/themes/MegaLight V4/setlist/selected.png
+data/themes/MegaLight V4/sounds/action.ogg
+data/themes/MegaLight V4/sounds/in.ogg
+data/themes/MegaLight V4/sounds/menu.ogg
+data/themes/MegaLight V4/sounds/out.ogg
+data/themes/MegaLight V4/sounds/select1.ogg
+data/themes/MegaLight V4/sounds/select2.ogg
+data/themes/MegaLight V4/sounds/select3.ogg
+data/themes/MegaLight V4/sounds/starding.ogg
+data/themes/MegaLight V4/sounds/starpower.ogg
+data/themes/MegaLight V4/sounds/start.ogg
+data/themes/MegaLight/menu/mainbg.png
+data/themes/MegaLight/menu/maintext.png
+data/themes/MegaLight/menu/neckchoosebg.png
+data/themes/MegaLight/menu/neckchooseselect.png
+data/themes/MegaLight/menu/neckchoosetext.png
+data/themes/MegaLight/menu/optionsbg.png
+data/themes/MegaLight/menu/optionspanel.png
+data/themes/MegaLight/menu/selected.png
+data/themes/MegaLight/rockmeter/bassgroovemult.png
+data/themes/MegaLight/rockmeter/counter.png
+data/themes/MegaLight/rockmeter/mult.png
+data/themes/MegaLight/rockmeter/mult2.png
+data/themes/MegaLight/rockmeter/overdrive bottom.png
+data/themes/MegaLight/rockmeter/overdrive fill.png
+data/themes/MegaLight/rockmeter/overdrive full.png
+data/themes/MegaLight/rockmeter/overdrive top.png
+data/themes/MegaLight/rockmeter/rock_arr.png
+data/themes/MegaLight/rockmeter/rock_bottom.png
+data/themes/MegaLight/rockmeter/rock_fill.png
+data/themes/MegaLight/rockmeter/rock_max.png
+data/themes/MegaLight/rockmeter/rock_top.png
+data/themes/MegaLight/rockmeter/score.png
+data/themes/MegaLight/rockmeter/stargrey.png
+data/themes/MegaLight/rockmeter/starwhite.png
+data/themes/MegaLight/setlist/item.dae
+data/themes/MegaLight/setlist/label.dae
+data/themes/MegaLight/setlist/library.dae
+data/themes/MegaLight/setlist/library_label.dae
+data/themes/MegaLight/setlist/selected.png
+data/themes/MegaLight/sounds/action.ogg
+data/themes/MegaLight/sounds/in.ogg
+data/themes/MegaLight/sounds/menu.ogg
+data/themes/MegaLight/sounds/out.ogg
+data/themes/MegaLight/sounds/select1.ogg
+data/themes/MegaLight/sounds/select2.ogg
+data/themes/MegaLight/sounds/select3.ogg
+data/themes/MegaLight/sounds/starding.ogg
+data/themes/MegaLight/sounds/starpower.ogg
+data/themes/MegaLight/sounds/start.ogg
+data/themes/MegaLight/stages/default.png
+data/themes/MegaLight/stages/practice.png
+data/themes/MegaLight/vocals/arrow.png
+data/themes/MegaLight/vocals/beatline.png
+data/themes/MegaLight/vocals/bottom.png
+data/themes/MegaLight/vocals/fill.png
+data/themes/MegaLight/vocals/glow.png
+data/themes/MegaLight/vocals/lyricsheet.png
+data/themes/MegaLight/vocals/lyricsheetglow.png
+data/themes/MegaLight/vocals/meter.png
+data/themes/MegaLight/vocals/meter_fill.png
+data/themes/MegaLight/vocals/mult.png
+data/themes/MegaLight/vocals/tap.png
+data/themes/MegaLight/vocals/tap_note.png
+data/themes/MegaLight/vocals/text.png
+data/themes/Uberlight/CREDITS
+data/themes/Uberlight/bassgroovemult.png
+data/themes/Uberlight/bassgrooveneck.png
+data/themes/Uberlight/bassgrooveneckovr.png
+data/themes/Uberlight/bigtail1.png
+data/themes/Uberlight/bigtail2.png
+data/themes/Uberlight/bpm_beat.png
+data/themes/Uberlight/bpm_halfbeat.png
+data/themes/Uberlight/bpm_measure.png
+data/themes/Uberlight/center_lines.png
+data/themes/Uberlight/copyright
+data/themes/Uberlight/counter.png
+data/themes/Uberlight/default.ttf
+data/themes/Uberlight/drumcenterlines.png
+data/themes/Uberlight/drumnotes.png
+data/themes/Uberlight/editor.png
+data/themes/Uberlight/fretbuttons.png
+data/themes/Uberlight/gameresults.png
+data/themes/Uberlight/glow.png
+data/themes/Uberlight/guitarsoloneck.png
+data/themes/Uberlight/guitarsoloneckovr.png
+data/themes/Uberlight/hitflames1.png
+data/themes/Uberlight/hitflames2.png
+data/themes/Uberlight/hitglow.png
+data/themes/Uberlight/hitglow1.png
+data/themes/Uberlight/hitglow2.png
+data/themes/Uberlight/kill1.png
+data/themes/Uberlight/kill2.png
+data/themes/Uberlight/loading.ttf
+data/themes/Uberlight/loadingbg.png
+data/themes/Uberlight/lyricsheet.png
+data/themes/Uberlight/menu.ttf
+data/themes/Uberlight/mult.png
+data/themes/Uberlight/notes.png
+data/themes/Uberlight/overdrive bottom.png
+data/themes/Uberlight/overdrive center_lines.png
+data/themes/Uberlight/overdrive fill.png
+data/themes/Uberlight/overdrive full.png
+data/themes/Uberlight/overdrive side_bars.png
+data/themes/Uberlight/overdrive top.png
+data/themes/Uberlight/overdriveneck.png
+data/themes/Uberlight/pause.png
+data/themes/Uberlight/pause.ttf
+data/themes/Uberlight/rock_arr.png
+data/themes/Uberlight/rock_bottom.png
+data/themes/Uberlight/rock_fill.png
+data/themes/Uberlight/rock_max.png
+data/themes/Uberlight/rock_top.png
+data/themes/Uberlight/score.png
+data/themes/Uberlight/score.ttf
+data/themes/Uberlight/side_bars.png
+data/themes/Uberlight/soloframe.png
+data/themes/Uberlight/stage.ini
+data/themes/Uberlight/star1.png
+data/themes/Uberlight/star2.png
+data/themes/Uberlight/stargrey.png
+data/themes/Uberlight/starperfect.png
+data/themes/Uberlight/starwhite.png
+data/themes/Uberlight/tail1.png
+data/themes/Uberlight/tail2.png
+data/themes/Uberlight/theme.ini
+data/themes/Uberlight/youfailed.png
+data/themes/Uberlight/yourock.png
+data/themes/Uberlight/menu/mainbg.png
+data/themes/Uberlight/menu/maintext.png
+data/themes/Uberlight/menu/neckchoosebg.png
+data/themes/Uberlight/menu/neckchooseselect.png
+data/themes/Uberlight/menu/neckchoosetext.png
+data/themes/Uberlight/menu/optionsbg.png
+data/themes/Uberlight/menu/optionspanel.png
+data/themes/Uberlight/menu/selected.png
+data/themes/Uberlight/setlist/selected.png
+data/themes/Uberlight/sounds/action.ogg
+data/themes/Uberlight/sounds/in.ogg
+data/themes/Uberlight/sounds/menu.ogg
+data/themes/Uberlight/sounds/out.ogg
+data/themes/Uberlight/sounds/select1.ogg
+data/themes/Uberlight/sounds/select2.ogg
+data/themes/Uberlight/sounds/select3.ogg
+data/themes/Uberlight/sounds/starding.ogg
+data/themes/Uberlight/sounds/starpower.ogg
+data/themes/Uberlight/sounds/start.ogg
+data/translations/brazilian_portuguese.mo
+data/translations/french.mo
+data/translations/french_(Reform_1990).mo
+data/translations/german.mo
+data/translations/hebrew.mo
+data/translations/italian.mo
+data/translations/pig_latin.mo
+data/translations/polish.mo
+data/translations/russian.mo
+data/translations/spanish.mo
+data/translations/swedish.mo
+data/tutorials/bangbang/guitar.ogg
+data/tutorials/bangbang/label.png
+data/tutorials/bangbang/notes.mid
+data/tutorials/bangbang/song.ini
+data/tutorials/bangbang/song.ogg
+data/tutorials/drumrolls/guitar.ogg
+data/tutorials/drumrolls/notes.mid
+data/tutorials/drumrolls/song.ini
+data/tutorials/drumtest/guitar.ogg
+data/tutorials/drumtest/notes.mid
+data/tutorials/drumtest/song.ini
+data/tutorials/jurgenfof/esc.png
+data/tutorials/jurgenfof/guitar.ogg
+data/tutorials/jurgenfof/keyboard.png
+data/tutorials/jurgenfof/notes.mid
+data/tutorials/jurgenfof/pose.png
+data/tutorials/jurgenfof/script.txt
+data/tutorials/jurgenfof/song.ini
+data/tutorials/jurgenfof/song.ogg
+data/users/controllers/defaultd.ini
+data/users/controllers/defaultg.ini
+data/users/controllers/defaultm.ini
+data/users/players/default.ini
+data/users/players/default.png
+data/vocals/arrow.png
+data/vocals/beatline.png
+data/vocals/bottom.png
+data/vocals/fill.png
+data/vocals/glow.png
+data/vocals/lyricsheet.png
+data/vocals/lyricsheetglow.png
+data/vocals/meter.png
+data/vocals/meter_fill.png
+data/vocals/mult.png
+data/vocals/tap.png
+data/vocals/tap_note.png
+data/vocals/text.png
+doc/Doxyfile
+doc/FOF Help.chm
+doc/Features-Manual.txt
+doc/FoFiX Options.pdf
+doc/Notices.txt
+doc/changelog.txt
+doc/copyright
+doc/hitwindows.htm
+scripts/FoFiX
+svg/cassette.svg
+svg/fofix_icon.svg
+svg/fofix_logo.svg
+svg/glow.svg
+svg/left.svg
+svg/right.svg
+svg/tutorials/jurgenfof/esc.svg
+svg/tutorials/jurgenfof/keyboard.svg
+svg/tutorials/jurgenfof/pose.svg

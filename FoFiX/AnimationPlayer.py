@@ -19,23 +19,38 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,        #
 # MA  02110-1301, USA.                                              #
 #####################################################################
-import os
-import sys
-
-from math import fabs as abs # Absolute value
-
-import pygame
-from pygame.locals import *
-
-from OpenGL.GL import *
-from OpenGL.GLU import *
-# Array-based drawing
-from numpy import array, float32
-
-from View import View, BackgroundLayer
-import Log
-
 from FoFiX.cmgl import *
+from math import fabs as abs
+import os
+
+import Log
+from OpenGL.constants import GL_UNSIGNED_BYTE
+from OpenGL.raw.GL import glBindTexture
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glDeleteTextures
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glGenTextures
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glTexImage2D
+from OpenGL.raw.GL import glTexParameteri
+from OpenGL.raw.GL.constants import GL_LINEAR
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GL.constants import GL_RGB
+from OpenGL.raw.GL.constants import GL_RGBA
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TEXTURE_MAG_FILTER
+from OpenGL.raw.GL.constants import GL_TEXTURE_MIN_FILTER
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+from View import BackgroundLayer
+from numpy import array
+from numpy import float32
+import pygame
+
 
 # Simple animation player
 class AnimationPlayer(BackgroundLayer):

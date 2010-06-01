@@ -39,15 +39,17 @@
 # uses copy-on-write semantics.  There is no way to make something in
 # a lower layer appear to have been deleted, however.
 
-import Version
-
+import errno
 import os
 import re
-import errno
+from stat import S_IFDIR
+from stat import S_ISDIR
+from stat import S_ISREG
 import sys
-import shutil
 import time
-from stat import S_IFDIR, S_ISDIR, S_ISREG
+
+import Version
+import shutil
 
 _mountTable = {}
 

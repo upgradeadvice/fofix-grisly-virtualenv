@@ -22,18 +22,12 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from OpenGL.GL import *
-from View import Layer
-
 import gc
-import threading
+
 import Log
-import Version
-import os
-import datetime
-import zipfile
-import Theme
-import Stage
+from OpenGL.raw.GL import glColor3f
+from View import Layer
+import threading
 
 class DebugLayer(Layer):
   """A layer for showing some debug information."""

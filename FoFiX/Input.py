@@ -22,9 +22,9 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-import Log
 import Audio
+import Log
+import pygame
 
 ports = None
 midi = []
@@ -122,7 +122,6 @@ if haveMidi:
 
 from Task import Task
 import Player
-from Player import Controls
 
 import Config   #MFH
 
@@ -185,7 +184,7 @@ class Input(Task):
     self.keyListeners         = []
     self.systemListeners      = []
     self.priorityKeyListeners = []
-    self.controls             = Controls()
+    self.controls             = Player.Controls()
     self.activeGameControls   = []
     self.p2Nav                = self.controls.p2Nav
     self.type1                = self.controls.type[0]
@@ -243,7 +242,7 @@ class Input(Task):
     pygame.mouse.set_visible(False)
   
   def reloadControls(self):
-    self.controls = Controls()
+    self.controls = Player.Controls()
 
   def pluginControls(self):
     self.gameDrums = 0

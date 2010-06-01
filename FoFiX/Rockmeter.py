@@ -21,18 +21,14 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Config
 import math
-import Log
 import os
-import random   #MFH - needed for new stage background handling
 
-import Version # Provides dataPath
+import Config
 
-from OpenGL.GL import *
-
-#stump: needed for continuous star fillup
-from PIL import Image, ImageDraw
+from OpenGL.raw.GL import glColor3f
+from PIL import Image
+from PIL import ImageDraw
 from Svg import ImgDrawing
 
 class Layer(object):  #A graphical stage layer that is used to render the rockmeter.

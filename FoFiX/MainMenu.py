@@ -23,26 +23,23 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from OpenGL.GL import *
-
-from View import BackgroundLayer
-from Menu import Menu
-from Lobby import Lobby, ControlConfigError
-from Language import _
-import Dialogs
-import Config
-import Audio
-import Settings
-import Version
-from Shader import shaders
-import sys
 import os
+import sys
 
-#myfingershurt: needed for random menu music:
+import Audio
+import Config
+import Dialogs
+from Language import _
+from Lobby import ControlConfigError
+from Lobby import Lobby
+import Log
+from Menu import Menu
+import Settings
+from Shader import shaders
+import Version
+from View import BackgroundLayer
 import random
 import string
-
-import Log
 
 class MainMenu(BackgroundLayer):
   def __init__(self, engine):

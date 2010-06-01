@@ -6,3 +6,5 @@ src/*.ini
 src/*.log
 data/library.zip
 data/users/players/FoFiX-players.cache
+build
+dist

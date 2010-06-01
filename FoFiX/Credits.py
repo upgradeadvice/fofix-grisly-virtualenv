@@ -22,26 +22,20 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-import OpenGL
-from OpenGL.GL import *
-from OpenGL.GLU import *
-import math
-#evilynux: needed for multi-OS file fetching
 import os
-
-#MFH - needed to check if running from compiled app or sources
 import sys
 
-from View import Layer
-from Input import KeyListener
-from Language import _
-import Song
-import Version
-import Player
 import Config
 import Dialogs
-import Theme
+from Input import KeyListener
+from Language import _
+import OpenGL
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glTranslatef
+import Player
+import Version
+from View import Layer
+import pygame
 
 try:
   from VideoPlayer import VideoPlayer

@@ -23,10 +23,12 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
+import os
+
 from ConfigParser import ConfigParser
+from ConfigParser import DEFAULTSECT
 import Log
 import Resource
-import os
 
 encoding  = "iso-8859-1"
 config    = None

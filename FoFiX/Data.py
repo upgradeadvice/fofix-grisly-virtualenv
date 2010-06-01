@@ -23,22 +23,17 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from Font import Font
-from Texture import Texture
-from Svg import ImgDrawing
-from Texture import Texture
-from Audio import Sound
-from Language import _
-import random
-import Language
-import Config
-import Version
-#myfingershurt: needed for multi-OS file fetching
 import os
-import sys
-import glob
-import Player
+
+from Audio import Sound
+import Config
+from Font import Font
 import Log
+import Player
+from Svg import ImgDrawing
+import Version
+import glob
+import random
 
 # these constants define a few customized letters in the default font
 #MFH - with the new simplified Font.py, no more custom glpyhs... let's do a simple replacement here for now...

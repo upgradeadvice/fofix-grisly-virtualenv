@@ -22,12 +22,17 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from View import BackgroundLayer
-from Input import KeyListener
 from Camera import Camera
+from Input import KeyListener
 
-from OpenGL.GL import *
-from OpenGL.GLU import *
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GLU import gluPerspective
+from View import BackgroundLayer
 
 #stump: raised by a scene constructor to abort scene processing
 class SuppressScene(Exception):

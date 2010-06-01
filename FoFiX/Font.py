@@ -21,12 +21,25 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
-from OpenGL.GL import *
 from FoFiX.cmgl import *
 import sys
+
+from OpenGL.GL.glget import glGetDoublev
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glRotatef
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL.constants import GL_CLAMP
+from OpenGL.raw.GL.constants import GL_CURRENT_BIT
+from OpenGL.raw.GL.constants import GL_CURRENT_COLOR
+from OpenGL.raw.GL.constants import GL_LINEAR
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
 from Texture import Texture
-from numpy import array, float32
+from numpy import array
+from numpy import float32
+import pygame
 
 DEFAULT_SCALE = 0.002
 

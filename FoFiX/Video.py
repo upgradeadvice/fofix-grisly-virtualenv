@@ -20,15 +20,16 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import pygame
 import os
-import sys
-from OpenGL.GL import *
-from OpenGL.GL.ARB.multisample import *
-from PIL import Image
-import Log
 import struct
+
 from Language import _
+import Log
+
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL.constants import GL_MULTISAMPLE_ARB
+from PIL import Image
+import pygame
 
 class Video:
   def __init__(self, caption = "Game", icon = None):

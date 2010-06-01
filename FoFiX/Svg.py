@@ -22,18 +22,41 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import os
-from OpenGL.GL import *
-
-import numpy as np
-from numpy import array, float32
-import math
 from FoFiX.cmgl import *
+import math
+import os
 
-import Log
 import Config
-from Texture import Texture, TextureException
+import Log
+
+from OpenGL.raw.GL import glClear
+from OpenGL.raw.GL import glClearColor
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glDepthMask
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glOrtho
+from OpenGL.raw.GL import glRotatef
+from OpenGL.raw.GL import glScalef
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL import glViewport
+from OpenGL.raw.GL.constants import GL_COLOR_BUFFER_BIT
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_DEPTH_BUFFER_BIT
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GL.constants import GL_STENCIL_BUFFER_BIT
+from OpenGL.raw.GL.constants import GL_TEXTURE
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
 from PIL import Image
+from Texture import Texture
+from Texture import TextureException
+import numpy as np
+from numpy import array
+from numpy import float32
 
 #stump: the last few stubs of DummyAmanith.py are inlined here since this
 # is the only place in the whole program that uses it now that we've pruned

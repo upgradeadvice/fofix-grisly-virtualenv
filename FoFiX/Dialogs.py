@@ -28,45 +28,39 @@
 
 """A bunch of dialog functions for interacting with the user."""
 
-import pygame
-from OpenGL.GL import *
-from OpenGL.GLU import *
+import fnmatch
 import math
 import os
-import fnmatch
-import string
-import time
-
-from View import Layer, BackgroundLayer
-from Input import KeyListener
-from Camera import Camera
-from Mesh import Mesh
-from Menu import Menu
-from Language import _
-from Texture import Texture
-from Player import GUITARTYPES, DRUMTYPES, MICTYPES
-import Log
-import Song
-import Data
-import Player
-import Guitar
-import random
-from Shader import shaders
-
-#myfingershurt: drums :)
-import Drum
-
-#stump: vocals
-import Microphone
-
-# evilynux - MFH-Alarian Mod credits
-from Credits import Credits
 
 import Config
-import Settings
-
-#MFH - for cd/song list
-from Svg import ImgDrawing
+from Credits import Credits
+from Input import KeyListener
+from Language import _
+import Log
+from Menu import Menu
+import Microphone
+from OpenGL.GL import glRotate
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glVertex2f
+from OpenGL.raw.GL.constants import GL_BLEND
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+import Player
+#from Player import DRUMTYPES
+#from Player import GUITARTYPES
+#from Player import MICTYPES
+from View import BackgroundLayer
+from View import Layer
+import pygame
 
 #MFH - for loading phrases
 def wrapCenteredText(font, pos, text, rightMargin = 1.0, scale = 0.002, visibility = 0.0, linespace = 1.0, allowshadowoffset = False, shadowoffset = (.0022, .0005)):

@@ -23,21 +23,53 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import Log
-import Version
+import imp
+import math
 import os
 import sys
-import imp
 
 import Config
-import Song
-from OpenGL.GL import *
-from OpenGL.GLU import *
-import string
-import math
 from Language import _
+import Log
+from OpenGL.GL import glRotate
+from OpenGL.raw.GL import glBegin
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glColor3f
+from OpenGL.raw.GL import glColor4f
+from OpenGL.raw.GL import glDepthMask
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glEnd
+from OpenGL.raw.GL import glLoadIdentity
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glOrtho
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glScalef
+from OpenGL.raw.GL import glTranslatef
+from OpenGL.raw.GL import glVertex2f
+from OpenGL.raw.GL.annotations import glGetIntegerv
+from OpenGL.raw.GL.constants import GL_BLEND
+from OpenGL.raw.GL.constants import GL_COLOR_MATERIAL
+from OpenGL.raw.GL.constants import GL_CULL_FACE
+from OpenGL.raw.GL.constants import GL_DEPTH_TEST
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_NORMALIZE
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TEXTURE
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+from OpenGL.raw.GL.constants import GL_VIEWPORT
+from OpenGL.raw.GLU import gluPerspective
 from Shader import shaders
+import Song
 from Task import Task
+import Version
+import string
+
+#from tcl.tix8.4.3.pref.WmDefault import retval
 
 #Theme Constants.
 

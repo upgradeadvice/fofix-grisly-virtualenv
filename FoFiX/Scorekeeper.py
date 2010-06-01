@@ -29,11 +29,10 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import os
-from Language import _
-import Song
-import Log
 import Config
+from Language import _
+import Log
+import Song
 
 HANDICAPS = [.75, 1.0, .8, .9, .75, .8, 1.05, 1.1, 1.03, 1.02, 1.01, .95, .9, .85, .7, .95, 0.0, .5, .7, .7]
 HANDICAP_NAMES = [_("Auto Kick Bass"), _("Medium Assist Mode"), _("Easy Assist Mode"), _("Jurgen Played!"), \

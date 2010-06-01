@@ -30,6 +30,7 @@
 # (Four lines of commentary that align perfectly... what about a fifth?)
 
 import math
+
 import numpy
 
 FORMANT_RANGE = [(300, 1300), (700, 2400), (1800, 3300), (3000, 4400)]

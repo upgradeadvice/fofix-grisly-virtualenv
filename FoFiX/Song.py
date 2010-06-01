@@ -22,29 +22,27 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-import midi
-import Log
-import Audio
-import Config
+import binascii
+import math
 import os
 import re
-import shutil
-import math
-import random
-import Config
-import hashlib
-import binascii
-import Cerealizer
-import urllib
-import Version
-import Theme
-import copy
-import string
-import cPickle  #stump: Cerealizer and sqlite3 don't seem to like each other that much...
-import Resource
-import time
-from Language import _
 import sqlite3
+import time
+
+import Audio
+import Cerealizer
+import Config
+from Language import _
+import Log
+import Resource
+import Theme
+import Version
+import cPickle
+import copy
+import hashlib
+import midi
+import random
+import urllib
 
 DEFAULT_BPM = 120.0
 DEFAULT_LIBRARY         = "songs"

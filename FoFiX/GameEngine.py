@@ -28,42 +28,63 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-from OpenGL.GL import *
-from OpenGL import __version__ as OpenGLVersion
-import numpy
-from PIL import Image
-from numpy import array, float32
-import pygame
+from FoFiX.cmgl import *
 import gc
+import imp
 import os
 import sys
-import imp
-import traceback
 
-from Task import Task
-from Video import Video
 from Audio import Audio
-from View import View
-from Input import Input, KeyListener, SystemEventListener
-from Resource import Resource
+import Config
 from Data import Data
-from World import World
-from Svg import SvgContext, ImgDrawing
-#alarian
-#from Song import EAS_DIF, MED_DIF, HAR_DIF, EXP_DIF
 from Debug import DebugLayer
+import Dialogs
+from Input import Input
+from Input import KeyListener
+from Input import SystemEventListener
 from Language import _
 import Log
-import Config
-import Dialogs
+import Mod
+from OpenGL import __version__ as OpenGLVersion
+from OpenGL.GL import glRotate
+from OpenGL.GL import glTranslate
+from OpenGL.raw.GL import glBlendFunc
+from OpenGL.raw.GL import glDepthMask
+from OpenGL.raw.GL import glDisable
+from OpenGL.raw.GL import glEnable
+from OpenGL.raw.GL import glGetIntegerv
+from OpenGL.raw.GL import glMatrixMode
+from OpenGL.raw.GL import glPopMatrix
+from OpenGL.raw.GL import glPushMatrix
+from OpenGL.raw.GL import glScalef
+from OpenGL.raw.GL import glViewport
+from OpenGL.raw.GL.constants import GL_MODELVIEW
+from OpenGL.raw.GL.constants import GL_ONE
+from OpenGL.raw.GL.constants import GL_ONE_MINUS_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_PROJECTION
+from OpenGL.raw.GL.constants import GL_SRC_ALPHA
+from OpenGL.raw.GL.constants import GL_TEXTURE_2D
+from OpenGL.raw.GL.constants import GL_TRIANGLE_STRIP
+from OpenGL.raw.GL.constants import GL_VIEWPORT
+from PIL import Image
+import Player
+from Resource import Resource
+from Shader import shaders
+from Song import difficulties
+from Song import parts
+from Svg import ImgDrawing
+from Svg import SvgContext
+from Task import Task
 from Theme import Theme
 import Version
-import Mod
-import Player
-from Shader import shaders
-from Song import difficulties, parts
-
-from FoFiX.cmgl import *
+from Video import Video
+from View import View
+from World import World
+import numpy
+from numpy import array
+from numpy import float32
+import pygame
+import traceback
 
 class ConfigOption:
   def __init__(self, id, text):
