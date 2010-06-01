@@ -8,3 +8,6 @@ data/library.zip
 data/users/players/FoFiX-players.cache
 build
 dist
+FoFiX/*.py[cod]
+FoFiX/midi/*.py[cod]
+FoFiX.egg-info
