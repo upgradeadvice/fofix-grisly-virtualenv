@@ -25,6 +25,16 @@ source fofix_env/bin/activate
 pip install -qe git://github.com/fuzion/fofix-grisly-virtualenv.git#egg=FoFiX
 FoFiX
 
+Windows (MSVC command prompt):
+Install your deps - http://code.google.com/p/fofix/wiki/RunningUnderPython26
+virtualenv fofix_env
+cd fofix_env
+Scripts\activate.bat
+Ignore the pip commands from above (you should already have these from the first step)
+cd ..\fofix-grisly-virtualenv
+python setup.py install
+cd ..\fofix_env
+python Scripts\FoFiX
 
 Notes:
 1. src lives in fofix_env/lib/python2.6/site-packages/FoFiX/
