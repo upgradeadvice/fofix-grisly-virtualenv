@@ -23,8 +23,9 @@
 # MA  02110-1301, USA.                                              #
 #####################################################################
 
-##@package FoFiX
-# Main game executable.
+'''
+Main game executable.
+'''
 
 # Register the latin-1 encoding
 import codecs
@@ -44,10 +45,6 @@ import sys
 import os
 import Version
 
-## Display command-line usage and exit.
-# Outputs to stdout unless py2exe'd, in which case the usage is presented
-# using a MessageBox().
-# @param errmsg    Optional error message.
 def _usage(errmsg=None):
   usage = """Usage: %(prog)s [options]
 
@@ -117,7 +114,6 @@ try:
 except:
   videoAvailable = False
 
-## Main function.
 def main():
   playing = None
   configFile = None
@@ -199,12 +195,12 @@ def main():
     if part is not None:
       engine.cmdPart = int(part)
     #evilynux - Multiplayer and mode selection support
-    Config.set("game", "players", nbrplayers)
+    
     if nbrplayers == 1:
-      Config.set("game", "game_mode", mode)
+      engine.cmdMode = nbrplayers, mode, 0
+    
     else:
-      Config.set("game", "game_mode", 0)
-      Config.set("game", "multiplayer_mode", mode)
+      engine.cmdMode = nbrplayers, 0, mode
 
   encoding = Config.get("game", "encoding")
   if encoding is not None:
@@ -223,6 +219,7 @@ def main():
     #  - intro_video_end_time
     themename = Config.get("coffee", "themename")
     vidSource = os.path.join(Version.dataPath(), 'themes', themename, \
+
                              'menu', 'intro.mp4')
     if os.path.isfile(vidSource):
       winWidth, winHeight = engine.view.geometry[2:4]
